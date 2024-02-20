@@ -1,13 +1,16 @@
 package com.uio.mvvmpractice.ui.theme
 
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+
 import androidx.lifecycle.ViewModel
 
 class MainViewModel:ViewModel() {
-    val list = mutableListOf<String>()
+    var list = mutableListOf<String>()
 
-    fun increment(item:String){
+    fun add(item:String){
            list.add(item)
+    }
+
+    fun delete(item:String){
+        list.remove(item)
     }
 }
